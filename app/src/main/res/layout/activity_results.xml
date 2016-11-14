@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        android:gravity="center">
+
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="34dp"
+            android:textIsSelectable="true"
+            android:text="show"
+            android:textSize="24dp"
+            android:id="@+id/textView"
+            android:paddingLeft="20dp"
+            android:paddingTop="0dp"
+             />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="26dp"
+            android:id="@+id/textView2"
+            android:text="Is available on:"
+            android:textSize="18dp"
+            android:layout_below="@+id/textView"
+            android:paddingLeft="22dp"
+            android:paddingTop="5dp"
+            android:layout_row="1"
+            android:layout_column="0" />
+    </GridLayout>
+</ScrollView>
