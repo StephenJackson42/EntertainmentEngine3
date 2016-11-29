@@ -60,7 +60,7 @@ public class ResultsActivity extends AppCompatActivity {
                     }
                 });
 
-        MySingleton.getInstance()
+        MySingleton.getInstance(this).addToRequestQueue(jsObjRequest);
         return url;
     }
 }
