@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/scrollView">
-    <GridLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme"
@@ -23,7 +23,7 @@
              />
 
         <TextView
-            android:layout_width="150dp"
+            android:layout_width="229dp"
             android:layout_height="26dp"
             android:id="@+id/textView2"
             android:text="Is available on:"
@@ -33,5 +33,16 @@
             android:paddingTop="5dp"
             android:layout_row="1"
             android:layout_column="0" />
-    </GridLayout>
+
+        <TextView
+            android:layout_height="52dp"
+            android:layout_width="706dp"
+            android:id="@+id/result1"
+            android:textSize="16dp"
+            android:text="test"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="36dp" />
+
+    </RelativeLayout>
 </ScrollView>
