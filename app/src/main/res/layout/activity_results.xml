@@ -35,7 +35,7 @@
             android:layout_column="0" />
 
         <TextView
-            android:layout_height="52dp"
+            android:layout_height="match_parent"
             android:layout_width="706dp"
             android:id="@+id/result1"
             android:textSize="16dp"
