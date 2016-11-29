@@ -38,7 +38,7 @@ public class ResultsActivity extends AppCompatActivity {
     }
 
     protected String results() throws JSONException{
-        String url = "http://api-public.guidebox.com/v1.43/US/rKIvHF0soparXENAMNBTfMrOBlJusc49/movie/50362";
+        String url = "http://api-public.guidebox.com/v1.43/US/rKIvHF0soparXENAMNBTfMrOBlJusc49/movie/50362"; //TODO: Make this a dynamic request depending on search.
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
@@ -46,7 +46,13 @@ public class ResultsActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         System.out.println("Obtained response");
-                        System.out.println("Response: " + response.toString());
+                        try {
+                            // This is where you put the result to the text view.
+                            // The string will come out to be result.toString() if you want to format it to your liking. getString will get specific objects.
+                            resultOne.setText(response.getString("title") + "\n" + response.getString("purchase_web_sources"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }, new Response.ErrorListener() {
 
@@ -61,6 +67,6 @@ public class ResultsActivity extends AppCompatActivity {
                 });
 
         MySingleton.getInstance(this).addToRequestQueue(jsObjRequest);
-        return url;
+        return null;
     }
 }
